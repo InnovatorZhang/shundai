@@ -10,6 +10,7 @@
 0、登陆
 
 请求格式：
+```json
 {
         "Type":0,
     "Content": {
@@ -17,8 +18,9 @@
         "Password":"123456"
     }
 }
-
+```
 返回格式：
+```json
 {
     "ErrorCode": 0,
     "ErrorMessage": "NONE",
@@ -36,19 +38,20 @@
         }
     }
 }
-
+```
 1、请求快递列表
 
 请求格式：
+```json
 {
 	"Type":1,
     "Content": {
         "Account":"老大"  //账户名，请求名为 老大 的快递列表
     }
 }
-
+```
 返回格式：
-
+```json
 {
     "ErrorCode": 0,
     "ErrorMessage": "NONE",
@@ -76,21 +79,23 @@
     }
 }
 
-
+```
 
 2、请求快递详细信息
 
 请求格式：
+```json
 {
 	"Type":2, 
     "Content": {
         "deliverid":2 
     }
 }
-
+```
 
 
 返回格式：
+```json
 {
     "ErrorCode": 0,
     "ErrorMessage": "NONE",
@@ -115,12 +120,13 @@
         ]
     }
 }
-
+```
 
 
 3、请求二手列表
 
 请求格式：
+```json
 {
 	"Type":3,
     "Content": {
@@ -128,9 +134,10 @@
     	"count":5  //请求的条数
     }
 }
+```
 
 返回格式：
-
+```json
 {
     "ErrorCode": 0,
     "ErrorMessage": "NONE",
@@ -171,21 +178,23 @@
         ]
     }
 }
-
+```
 
 
 4、请求二手详细信息
 
 
 请求格式：
+```json
 {
 	"Type":4,
     "Content": {
     	"goodsid":1
     }
 }
-
+```
 返回格式：
+```json
 {
     "ErrorCode": 0,
     "ErrorMessage": "NONE",
@@ -216,3 +225,4 @@
         ]
     }
 }
+```
