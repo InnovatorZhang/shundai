@@ -2,6 +2,34 @@
 
 ## demo 待完成
 
+## 注册
+
+请求地址：120.77.212.41/MYHTML/shundai/register.php
+==========================================================
+
+请求格式：
+```json
+{
+	"Type":0,
+	"Content":{
+		"username":"不透明",
+		"password":"123467"
+	}
+}
+```
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": "注册成功啦!!"
+    }
+}
+```
+
 
 请求地址：120.77.212.41/MYHTML/shundai/getInformation.php
 ==========================================================
