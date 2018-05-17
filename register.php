@@ -13,7 +13,7 @@ $data = $arrayData["Content"];
 
 $username = $data["username"];
 $password = $data["password"];
-
+echo $username.$password;
 
 if($username && $password){
     $sql = $pdo->prepare("SELECT * FROM person WHERE username = ?");
