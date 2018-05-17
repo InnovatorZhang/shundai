@@ -4,7 +4,7 @@
 
 ## 注册
 
-请求地址：120.77.212.41/MYHTML/shundai/register.php
+请求地址：http://120.77.212.41/MYHTML/shundai/register.php
 ==========================================================
 
 请求格式：
@@ -31,7 +31,7 @@
 ```
 
 
-请求地址：120.77.212.41/MYHTML/shundai/getInformation.php
+请求地址：http://120.77.212.41/MYHTML/shundai/getInformation.php
 ==========================================================
 
 
