@@ -255,7 +255,7 @@
 }
 ```
 
-请求地址：  http://139.199.23.185/shundai/modifyAvatar.php
+请求地址：http://120.77.212.41/MYHTML/shundai/modifyAvatar.php
 ============================================================
 
 ### 6、修改用户头像
@@ -276,8 +276,44 @@
         "status": 200,
         "info": "success",
         "data": {
-            "avatarUrl": "http://139.199.23.185/shundai/picture/avatar/2.png"
+            "avatarUrl": "http://120.77.212.41/MYHTML/shundai/picture/avatar/2.png"
         }
+    }
+}
+```
+
+
+请求地址：http://120.77.212.41/MYHTML/shundai/getInformation.php
+==========================================================
+
+### 7、增加快递信息
+
+请求格式：
+```json
+{
+	"Type":0,
+	"Content":{
+		"uid":6,
+		"deliverstatus":1,
+		"repay":"10元",
+		"phonenumber":"1865485625253",
+		"delivertype":"顺丰",
+		"receivetime":"五月十八日8：00--9：00",
+		"sendlocation":"重邮28栋",
+		"note":"快一点哦！大哥！"
+	}
+}
+```
+
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": "添加成功"
     }
 }
 ```
