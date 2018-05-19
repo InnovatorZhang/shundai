@@ -265,7 +265,7 @@
 图片名称为 你要修改头像用户的 "id "+ ".png "
 
 ![qingqiu](screenshot/modifyAvatar.JPG)
-如上图所示为修改id为2的用户的头像为2.png
+如上图所示为修改id为1的用户的头像为1.png
 
 返回格式：
 ```json
