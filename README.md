@@ -283,7 +283,7 @@
 ```
 
 
-请求地址：http://120.77.212.41/MYHTML/shundai/getInformation.php
+请求地址：http://120.77.212.41/MYHTML/shundai/addExpress.php
 ==========================================================
 
 ### 7、增加快递信息
@@ -318,7 +318,7 @@
 }
 ```
 
-请求地址：http://139.199.23.185/shundai/addSecondHand.php
+请求地址：http://120.77.212.41/MYHTML/shundai/addSecondHand.php
 ==========================================================
 
 ### 8、添加二手商品
