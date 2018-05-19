@@ -317,3 +317,44 @@
     }
 }
 ```
+
+请求地址：http://139.199.23.185/shundai/addSecondHand.php
+==========================================================
+
+### 8、添加二手商品
+
+请求格式：
+```json
+{
+	"Type":0,
+	"Content":{
+		"uid":6,
+		"title":"标题好难想啊",
+		"price":"10元",
+		"publishid":18,
+		"publishtime":"2016年9月10日",
+		"page":255,
+		"phonenumber":"9090980",
+		"words":"1000字",
+		"paper":"胶版纸",
+		"format":2,
+		"printtime":"2016年10月10日",
+		"package":"土豪版",
+		"printtimes":5,
+		"isbn":"4145861216",
+		"recommended":"这本苏写的是真的好哦！看完高数一百分！"
+	}
+}
+```
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": "添加成功"
+    }
+}
+```
