@@ -358,3 +358,30 @@
     }
 }
 ```
+
+请求地址：http://120.77.212.41/MYHTML/shundai/modifyAvatar.php
+============================================================
+
+### 9、修改二手商品的图片
+
+请求格式:
+上传png图片
+图片名称为 你要修改商品的 "id "+ ".png "
+
+![qingqiu](screenshot/modifyImage.JPG)
+如上图所示为修改id为1的商品为1.png
+
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": {
+            "imageUrl": "http://120.77.212.41/MYHTML/shundai/picture/image/1.png"
+        }
+    }
+}
+```
