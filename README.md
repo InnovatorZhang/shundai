@@ -385,3 +385,61 @@
     }
 }
 ```
+
+请求地址：http://120.77.212.41/MYHTML/shundai/deleteExpress.php
+============================================================
+
+### 10、删除快递
+
+请求格式：
+```json
+{
+	"Type":0,
+	"Content":{
+		"id":6
+	}
+}
+```
+
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": "删除成功"
+    }
+}
+```
+
+
+
+请求地址：http://120.77.212.41/MYHTML/shundai/deleteSecondHand.php
+============================================================
+
+### 11、删除商品
+
+请求格式：
+```json
+{
+	"Type":0,
+	"Content":{
+		"id":6
+	}
+}
+```
+
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": "删除成功"
+    }
+}
+```
