@@ -9,7 +9,7 @@ function login($pdo,$data){
   $username = $data["Account"];
   $password = $data["Password"];
 
-  $sql = $pdo->prepare("SELECT id,username,password,avatar,phonenumber,sex,token FROM person WHERE username = ? AND password = ?");
+  $sql = $pdo->prepare("SELECT id,username,password,avatar,phonenumber,sex,birthday,school,qqnumber,alipay,token FROM person WHERE username = ? AND password = ?");
   $sql->execute(array($username, $password));
   if ($row = $sql->fetch(PDO::FETCH_NAMED)) {
       success_encode($row);
@@ -95,8 +95,8 @@ function getExpressInfo($pdo,$data){
 */
 function getSecondHandList($pdo,$data){
 	//获取要取用的页数和数量
-	$page = $data["page"];
-	$count = $data["count"];
+	$page = (int)$data["page"];
+	$count = (int)$data["count"];
 	
 	//因为是从1页开始的
 	$page = $page-1;
@@ -158,6 +158,33 @@ function getSecondHandInfo($pdo,$data){
 }
 
 
+/**
+*获取所有快递信息
+*/
+
+function getExpressList2($pdo,$data){
+    //获取要取用的页数和数量
+	$page = (int)$data["page"];
+	$count = (int)$data["count"];
+				
+	//因为是从1页开始的
+	$page = $page-1;
+					
+	//查询开始的位置
+	$begin = $page*$count;
+	
+	//准备数据库
+	$sql = $pdo->prepare("SELECT id AS expressid,deliverstatus,delivertype,receivetime,sendlocation FROM express LIMIT ?,?");
+
+	$sql->execute(array($begin,$count));
+
+	if($data = $sql->fetchAll(PDO::FETCH_NAMED)){
+		success_encode($data);
+	}else{
+		other_encode("没有数据了哦!");
+	}
+	
+}
 
 
 

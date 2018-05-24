@@ -56,18 +56,23 @@
         "status": 200,
         "info": "success",
         "data": {
-            "id": 2,
-            "username": "老大",
+            "id": "1",
+            "username": "张中豪",
             "password": "123456",
-            "avatar": null,
-            "phonenumber": "18883649890",
-            "sex": 1,
-            "token": null
+            "avatar": "http://120.77.212.41/MYHTML/shundai/picture/avatar/1.png",
+            "phonenumber": "56481651",
+            "sex": "1",
+            "birthday": "1997-11-2",
+            "school": "CQUPT",
+            "qqnumber": "1070042265",
+            "alipay": "18883649890",
+            "token": "sfdghggfdsadfg"
         }
     }
 }
+
 ```
-### 2、请求快递列表
+### 2、请求用户快递列表
 
 请求格式：
 ```json
@@ -109,7 +114,47 @@
 
 ```
 
-### 3、请求快递详细信息
+### 3、请求所有的快递列表
+
+请求格式：
+```json
+{
+	"Type":5,
+    "Content": {
+    	"page":1,  
+    	"count":2 
+    }
+}
+```
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": [
+            {
+                "expressid": "2",
+                "deliverstatus": "0",
+                "delivertype": "顺丰快递",
+                "receivetime": "8:00-9:00",
+                "sendlocation": "重邮15栋"
+            },
+            {
+                "expressid": "4",
+                "deliverstatus": "0",
+                "delivertype": "圆通快递",
+                "receivetime": "9:00-12:00",
+                "sendlocation": "重邮五栋"
+            }
+        ]
+    }
+}
+```
+
+### 4、请求快递详细信息
 
 请求格式：
 ```json
@@ -151,7 +196,7 @@
 ```
 
 
-### 4、请求二手列表
+### 5、请求二手列表
 
 请求格式：
 ```json
@@ -209,7 +254,7 @@
 ```
 
 
-### 5、请求二手详细信息
+### 6、请求二手详细信息
 
 
 请求格式：
@@ -258,7 +303,7 @@
 请求地址：http://120.77.212.41/MYHTML/shundai/modifyAvatar.php
 ============================================================
 
-### 6、修改用户头像
+### 7、修改用户头像
 
 请求格式:
 上传png图片
@@ -286,7 +331,7 @@
 请求地址：http://120.77.212.41/MYHTML/shundai/addExpress.php
 ==========================================================
 
-### 7、增加快递信息
+### 8、增加快递信息
 
 请求格式：
 ```json
@@ -321,7 +366,7 @@
 请求地址：http://120.77.212.41/MYHTML/shundai/addSecondHand.php
 ==========================================================
 
-### 8、添加二手商品
+### 9、添加二手商品
 
 请求格式：
 ```json
@@ -359,10 +404,10 @@
 }
 ```
 
-请求地址：http://120.77.212.41/MYHTML/shundai/modifyAvatar.php
+请求地址：http://120.77.212.41/MYHTML/shundai/modifyImage.php
 ============================================================
 
-### 9、修改二手商品的图片
+### 10、修改二手商品的图片
 
 请求格式:
 上传png图片
@@ -389,7 +434,7 @@
 请求地址：http://120.77.212.41/MYHTML/shundai/deleteExpress.php
 ============================================================
 
-### 10、删除快递
+### 11、删除快递
 
 请求格式：
 ```json
@@ -419,7 +464,7 @@
 请求地址：http://120.77.212.41/MYHTML/shundai/deleteSecondHand.php
 ============================================================
 
-### 11、删除商品
+### 12、删除商品
 
 请求格式：
 ```json
@@ -440,6 +485,39 @@
         "status": 200,
         "info": "success",
         "data": "删除成功"
+    }
+}
+```
+
+请求地址：http://120.77.212.41/MYHTML/shundai/modifyUserInformation.php
+=======================================================================
+
+### 13、修改个人信息
+
+请求格式：
+```json
+{
+        "Type":0,
+    "Content": {
+        "username":"张中豪",
+        "password":"123456",
+		"phonenumber":"9090900",
+        "birthday":"1888-5-28",
+        "school":"TPUQC",
+        "qqnumber":"1270246920",
+        "alipay":"17784451850"
+    }
+}
+```
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": "修改个人信息成功"
     }
 }
 ```

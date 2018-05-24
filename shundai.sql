@@ -8,6 +8,10 @@ sex INT NOT NULL DEFAULT 1,
 phonenumber VARCHAR(13) NOT NULL DEFAULT "10010",
 avatar VARCHAR(100) DEFAULT "http://127.0.0.1/shundai/picture/avatar/default.png",
 token VARCHAR(64) DEFAULT NULL,
+birthday VARCHAR(20) DEFAULT NULL,
+school VARCHAR(20) DEFAULT NULL,
+qqnumber VARCHAR(15) DEFAULT NULL,
+alipay VARCHAR(15) DEFAULT NULL,
 PRIMARY KEY(id)
 )DEFAULT CHARSET = utf8mb4;
 
