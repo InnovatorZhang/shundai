@@ -181,7 +181,7 @@ function getExpressList2($pdo,$data){
 	if($data = $sql->fetchAll(PDO::FETCH_NAMED)){
 		success_encode($data);
 	}else{
-		other_encode("没有数据了哦!");
+		other_encode(400,"没有数据了哦!");
 	}
 	
 }
