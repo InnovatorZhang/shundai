@@ -18,6 +18,8 @@ if($data){
     $password = $data["password"];
 	//性别
 	$sex = (int)$data["sex"];
+	//昵称
+	$nickname = $data["nickname"];
 	//被修改人的电话号码
 	$phonenumber = $data["phonenumber"];
 	//生日
@@ -30,9 +32,9 @@ if($data){
 	$alipay = $data["alipay"];
     
 	//准备数据库
-	$sql = $pdo->prepare("UPDATE person SET sex=?,phonenumber=?,birthday=?,school=?,qqnumber=?,alipay=? WHERE username=? AND password=?");
+	$sql = $pdo->prepare("UPDATE person SET nickname=?,sex=?,phonenumber=?,birthday=?,school=?,qqnumber=?,alipay=? WHERE username=? AND password=?");
 
-	if($sql->execute(array($sex,$phonenumber,$birthday,$school,$qqnumber,$alipay,$username,$password))){
+	if($sql->execute(array($nickname,$sex,$phonenumber,$birthday,$school,$qqnumber,$alipay,$username,$password))){
 		success_encode("修改个人信息成功");
 	}else{
 	    other_encode(400,"请检查上传的字段是否有误!!!");

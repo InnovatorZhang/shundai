@@ -58,6 +58,7 @@
         "data": {
             "id": "1",
             "username": "张中豪",
+			"nickname": "夜曲",
             "password": "123456",
             "avatar": "http://120.77.212.41/MYHTML/shundai/picture/avatar/1.png",
             "phonenumber": "56481651",
@@ -94,7 +95,8 @@
         "data": [
             {
                 "deliverid": 5,
-                "nickname": "老大",
+                "username": "老大",
+				"nickname": "夜曲",
                 "avatar": null,
                 "delivertype": "韵达快递",
                 "receivetime": "9:00-12:00",
@@ -102,7 +104,8 @@
             },
             {
                 "deliverid": 10,
-                "nickname": "老大",
+                "username": "老大",
+				"nickname": "夜曲",
                 "avatar": null,
                 "delivertype": "韵达快递",
                 "receivetime": "9:00-12:00",
@@ -185,7 +188,8 @@
                 "sendlocation": "重邮15栋",
                 "note": null,
                 "repay": "30元",
-                "nickname": "张中豪",
+                "username": "张中豪",
+				"nickname": "夜曲",
                 "phonenumber": "18883649890",
                 "sex": 1,
                 "token": null
@@ -279,7 +283,8 @@
                 "goodsid": 1,
                 "title": "我是一本书",
                 "avatar": null,
-                "nickname": "张中豪",
+                "username": "张中豪",
+				"nickname": "夜曲",
                 "image": null,
                 "token": null,
                 "publishtime": "2015年11月15日",
@@ -501,6 +506,7 @@
     "Content": {
         "username":"张中豪",
         "password":"123456",
+		"nickname": "夜曲",
 		"phonenumber":"9090900",
 		"sex":1,
         "birthday":"1888-5-28",

@@ -9,7 +9,7 @@ function login($pdo,$data){
   $username = $data["Account"];
   $password = $data["Password"];
 
-  $sql = $pdo->prepare("SELECT id,username,password,avatar,phonenumber,sex,birthday,school,qqnumber,alipay,token FROM person WHERE username = ? AND password = ?");
+  $sql = $pdo->prepare("SELECT id,username,password,nickname,avatar,phonenumber,sex,birthday,school,qqnumber,alipay,token FROM person WHERE username = ? AND password = ?");
   $sql->execute(array($username, $password));
   if ($row = $sql->fetch(PDO::FETCH_NAMED)) {
       success_encode($row);
@@ -33,7 +33,8 @@ function getExpressList($pdo,$data){
 	  
 	  //通过id找到对应的快递
 	  $sql = $pdo->prepare("SELECT express.id AS deliverid,
-	  person.username AS nickname,
+	  person.username,
+	  person.nickname,
 	  person.avatar,
 	  express.delivertype,
 	  express.receivetime,
@@ -73,7 +74,8 @@ function getExpressInfo($pdo,$data){
 	express.sendlocation,
 	express.note,
 	express.repay,
-	person.username AS nickname,
+	person.username,
+	person.nickname,
 	express.phonenumber,
 	person.sex,
 	person.token
@@ -130,7 +132,8 @@ function getSecondHandInfo($pdo,$data){
 	$sql = $pdo->prepare("SELECT secondhand.id AS goodsid,
 	secondhand.title,
 	person.avatar,
-	person.username AS nickname,
+	person.username,
+	person.nickname,
 	secondhand.image,
 	person.token,
 	secondhand.publishtime,
