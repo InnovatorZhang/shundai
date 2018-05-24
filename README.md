@@ -502,6 +502,7 @@
         "username":"张中豪",
         "password":"123456",
 		"phonenumber":"9090900",
+		"sex":1,
         "birthday":"1888-5-28",
         "school":"TPUQC",
         "qqnumber":"1270246920",
