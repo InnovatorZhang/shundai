@@ -38,6 +38,7 @@ function getExpressList($pdo,$data){
 	  express.note AS remark,
 	  express.delivertype,
 	  express.receivetime,
+	  express.phonenumber,
 	  express.sendlocation
 	  FROM person RIGHT JOIN express ON person.id=express.uid 
 	  WHERE express.uid = ?");

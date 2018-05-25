@@ -100,6 +100,7 @@
                 "remark": null,
                 "delivertype": "韵达快递",
                 "receivetime": "9:00-12:00",
+                "phonenumber": "9090900",
                 "sendlocation": "重邮五栋"
             },
             {
@@ -109,11 +110,13 @@
                 "remark": null,
                 "delivertype": "韵达快递",
                 "receivetime": "9:00-12:00",
+                "phonenumber": "9090900",
                 "sendlocation": "重邮五栋"
             }
         ]
     }
 }
+
 
 ```
 
