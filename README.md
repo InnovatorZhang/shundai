@@ -94,19 +94,19 @@
         "info": "success",
         "data": [
             {
-                "deliverid": 5,
+                "deliverid": "5",
                 "username": "老大",
-				"nickname": "夜曲",
-                "avatar": null,
+                "prcie": "22元",
+                "remark": null,
                 "delivertype": "韵达快递",
                 "receivetime": "9:00-12:00",
                 "sendlocation": "重邮五栋"
             },
             {
-                "deliverid": 10,
+                "deliverid": "10",
                 "username": "老大",
-				"nickname": "夜曲",
-                "avatar": null,
+                "prcie": "22元",
+                "remark": null,
                 "delivertype": "韵达快递",
                 "receivetime": "9:00-12:00",
                 "sendlocation": "重邮五栋"

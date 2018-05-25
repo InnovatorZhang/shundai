@@ -19,7 +19,7 @@ function login($pdo,$data){
 }
 
 /**
-*获取快递列表
+*获取用户快递列表
 */
 function getExpressList($pdo,$data){
 	$username = $data["Account"];
@@ -34,8 +34,8 @@ function getExpressList($pdo,$data){
 	  //通过id找到对应的快递
 	  $sql = $pdo->prepare("SELECT express.id AS deliverid,
 	  person.username,
-	  person.nickname,
-	  person.avatar,
+	  express.repay AS price,
+	  express.note AS remark,
 	  express.delivertype,
 	  express.receivetime,
 	  express.sendlocation
