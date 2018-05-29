@@ -178,7 +178,15 @@ function getExpressList2($pdo,$data){
 	$begin = $page*$count;
 	
 	//准备数据库
-	$sql = $pdo->prepare("SELECT id AS expressid,deliverstatus,delivertype,receivetime,sendlocation FROM express LIMIT ?,?");
+	$sql = $pdo->prepare("SELECT express.id AS expressid,
+	person.username,
+	person.nickname,
+	person.avatar,
+	express.deliverstatus,
+	express.delivertype,
+	express.receivetime,
+	express.sendlocation 
+	FROM person RIGHT JOIN express ON person.id=express.uid LIMIT ?,?");
 
 	$sql->execute(array($begin,$count));
 
@@ -191,6 +199,49 @@ function getExpressList2($pdo,$data){
 }
 
 
+/**
+*获取用户商品列表
+*/
+function getSecondHandList2($pdo,$data){
+	$username = $data["Account"];
+	
+	//通过账户获取id
+	$sql = $pdo->prepare("SELECT id FROM person WHERE username = ?");
+    $sql->execute(array($username));
+	if ($row = $sql->fetch(PDO::FETCH_NAMED)) {
+      //拿到账户id
+	  $id = $row["id"];
+	  
+	  //通过id找到对应的快递
+	  $sql = $pdo->prepare("SELECT secondhand.id AS goodsid,
+	secondhand.title,
+	person.avatar,
+	person.username,
+	person.nickname,
+	secondhand.image,
+	secondhand.printtime,
+	secondhand.phonenumber,
+	secondhand.price,
+	secondhand.recommended
+	FROM person RIGHT JOIN secondhand ON person.id=secondhand.uid
+	WHERE secondhand.uid = ?");
+	  
+      $sql->execute(array($id));
+	  
+	  if($data = $sql->fetchAll(PDO::FETCH_NAMED)){
+		 success_encode($data);
+	  }else{
+		 other_encode(400, "没有数据哦!");
+	  }
+	  
+	  
+	  
+    } else {
+      other_encode(400, "用户名错误!!!");
+    }
+	
+	
+}
 
 
 

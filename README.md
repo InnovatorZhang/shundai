@@ -100,7 +100,7 @@
                 "remark": null,
                 "delivertype": "韵达快递",
                 "receivetime": "9:00-12:00",
-                "phonenumber": "9090900",
+                "phonenumber": "46845345215",
                 "sendlocation": "重邮五栋"
             },
             {
@@ -110,7 +110,7 @@
                 "remark": null,
                 "delivertype": "韵达快递",
                 "receivetime": "9:00-12:00",
-                "phonenumber": "9090900",
+                "phonenumber": "46845345215",
                 "sendlocation": "重邮五栋"
             }
         ]
@@ -142,15 +142,21 @@
         "info": "success",
         "data": [
             {
-                "expressid": "2",
-                "deliverstatus": "0",
+                "expressid": 2,
+                "username": "张中豪",
+                "nickname": "夜曲",
+                "avatar": "http://127.0.0.1/shundai/picture/avatar/1.png",
+                "deliverstatus": 0,
                 "delivertype": "顺丰快递",
                 "receivetime": "8:00-9:00",
                 "sendlocation": "重邮15栋"
             },
             {
-                "expressid": "4",
-                "deliverstatus": "0",
+                "expressid": 4,
+                "username": "张中豪",
+                "nickname": "夜曲",
+                "avatar": "http://127.0.0.1/shundai/picture/avatar/1.png",
+                "deliverstatus": 0,
                 "delivertype": "圆通快递",
                 "receivetime": "9:00-12:00",
                 "sendlocation": "重邮五栋"
@@ -202,8 +208,57 @@
 }
 ```
 
+### 5、请求用户二手商品列表
 
-### 5、请求二手列表
+请求格式：
+```json
+{
+	"Type":6,
+    "Content": {
+        "Account":"张中豪"
+    }
+}
+```
+
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": [
+            {
+                "goodsid": 1,
+                "title": "我是一本书",
+                "avatar": "http://127.0.0.1/shundai/picture/avatar/1.png",
+                "username": "张中豪",
+                "nickname": "夜曲",
+                "image": "http://127.0.0.1/shundai/picture/image/1.png",
+                "printtime": "2018年5月1日",
+                "phonenumber": "17784451850",
+                "price": "88元",
+                "recommended": null
+            },
+            {
+                "goodsid": 6,
+                "title": "震惊",
+                "avatar": "http://127.0.0.1/shundai/picture/avatar/1.png",
+                "username": "张中豪",
+                "nickname": "夜曲",
+                "image": "http://127.0.0.1/shundai/picture/image/default.png",
+                "printtime": "2018年5月1日",
+                "phonenumber": "5468452",
+                "price": "86元",
+                "recommended": null
+            }
+        ]
+    }
+}
+```
+
+### 6、请求所有二手商品列表
 
 请求格式：
 ```json
@@ -261,7 +316,7 @@
 ```
 
 
-### 6、请求二手详细信息
+### 7、请求二手详细信息
 
 
 请求格式：
@@ -311,7 +366,7 @@
 请求地址：http://120.77.212.41/MYHTML/shundai/modifyAvatar.php
 ============================================================
 
-### 7、修改用户头像
+### 8、修改用户头像
 
 请求格式:
 上传png图片
@@ -339,7 +394,7 @@
 请求地址：http://120.77.212.41/MYHTML/shundai/addExpress.php
 ==========================================================
 
-### 8、增加快递信息
+### 9、增加快递信息
 
 请求格式：
 ```json
@@ -374,7 +429,7 @@
 请求地址：http://120.77.212.41/MYHTML/shundai/addSecondHand.php
 ==========================================================
 
-### 9、添加二手商品
+### 10、添加二手商品
 
 请求格式：
 ```json
@@ -415,7 +470,7 @@
 请求地址：http://120.77.212.41/MYHTML/shundai/modifyImage.php
 ============================================================
 
-### 10、修改二手商品的图片
+### 11、修改二手商品的图片
 
 请求格式:
 上传png图片
@@ -442,7 +497,7 @@
 请求地址：http://120.77.212.41/MYHTML/shundai/deleteExpress.php
 ============================================================
 
-### 11、删除快递
+### 12、删除快递
 
 请求格式：
 ```json
@@ -472,7 +527,7 @@
 请求地址：http://120.77.212.41/MYHTML/shundai/deleteSecondHand.php
 ============================================================
 
-### 12、删除商品
+### 13、删除商品
 
 请求格式：
 ```json
@@ -500,7 +555,7 @@
 请求地址：http://120.77.212.41/MYHTML/shundai/modifyUserInformation.php
 =======================================================================
 
-### 13、修改个人信息
+### 14、修改个人信息
 
 请求格式：
 ```json

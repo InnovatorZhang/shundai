@@ -24,6 +24,8 @@ if($type == 0){
 	getSecondHandInfo($pdo,$data);
 }else if($type == 5){
 	getExpressList2($pdo,$data);
+}else if($type == 6){
+	getSecondHandList2($pdo,$data);
 }else{
 	other_encode(400, "wrong type!!!");
 }
