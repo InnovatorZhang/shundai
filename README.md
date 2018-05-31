@@ -462,7 +462,9 @@
     "content": {
         "status": 200,
         "info": "success",
-        "data": "添加成功"
+        "data": {
+            "id": 11
+        }
     }
 }
 ```
@@ -583,6 +585,36 @@
         "status": 200,
         "info": "success",
         "data": "修改个人信息成功"
+    }
+}
+```
+
+
+请求地址：http://120.77.212.41/MYHTML/shundai/modifyExpressStatus.php
+=================================================================
+
+### 15、修改快递状态
+
+请求格式：
+```json
+{
+	"Type":0,
+	"Content":{
+		"id":2,
+		"status":2
+	}
+}
+```
+
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": "修改快递状态成功"
     }
 }
 ```

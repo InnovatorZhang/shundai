@@ -52,7 +52,28 @@ if($data){
 			?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
 	if($sql->execute(array($uid,$title,$price,$publishid,$publishtime,$page,$phonenumber,$words,$paper,$format,$printtime,$package,$printtimes,$isbn,$recommended))){
-	    success_encode("添加成功");
+		//查询id
+		$sql = $pdo->prepare("SELECT id FROM secondhand WHERE title = ?");
+		$sql->execute(array($title));
+		//返回商品的id
+		$id = 0;
+		$data = $sql->fetchAll(PDO::FETCH_NAMED);
+		
+		//找到最近插入的商品的id
+		foreach($data as $e){
+			if($e['id'] > $id){
+				$id = $e['id'];
+			}
+			
+		}
+		
+		if($id > 0){
+			$data2['id'] = $id;
+			success_encode($data2);
+		}else{
+			other_encode(400,"未知错误");
+		}
+	    
 	}else{
 	    other_encode(400,"请检查信息是否完善!!!");
 	}
