@@ -2,7 +2,11 @@
 
 ## demo 待完成
 
+<<<<<<< HEAD
 #                  基本功能
+=======
+#              基本功能
+>>>>>>> 4ff32bdbc879d520ae9d0b6b08f02ad304a16ad4
 
 ### 0、注册
 
@@ -621,9 +625,15 @@
 }
 ```
 
+<<<<<<< HEAD
 #                       表白墙
 
 请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/SayYourLove/addLoveRequest.php
+=======
+#               表白墙
+
+请求地址：http://120.77.212.41/MYHTML/shundai/addLoveRequest.php
+>>>>>>> 4ff32bdbc879d520ae9d0b6b08f02ad304a16ad4
 
 1、	添加告白
 
@@ -650,8 +660,12 @@
     }
 }
 ```
+<<<<<<< HEAD
 
 请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/SayYourLove/addComment.php
+=======
+请求地址：http://120.77.212.41/MYHTML/shundai/addComment.php
+>>>>>>> 4ff32bdbc879d520ae9d0b6b08f02ad304a16ad4
 
 2、	添加评论
 
@@ -678,10 +692,16 @@
     }
 }
 ```
+<<<<<<< HEAD
 请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/SayYourLove/getLoveWallList.php
 
 3、	请求告白列表
 
+=======
+请求地址：http://120.77.212.41/MYHTML/shundai/getLoveWallList.php
+
+3、	请求告白列表
+>>>>>>> 4ff32bdbc879d520ae9d0b6b08f02ad304a16ad4
 请求格式：
 ```json
 {
@@ -715,7 +735,11 @@
     }
 }
 ```
+<<<<<<< HEAD
 请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/SayYourLove/getComments.php
+=======
+请求地址：http://120.77.212.41/MYHTML/shundai/getComments.php
+>>>>>>> 4ff32bdbc879d520ae9d0b6b08f02ad304a16ad4
 
 4、	请求评论列表
 
@@ -759,3 +783,7 @@
     }
 }
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ff32bdbc879d520ae9d0b6b08f02ad304a16ad4
