@@ -2,9 +2,11 @@
 
 ## demo 待完成
 
+#                  基本功能
+
 ### 0、注册
 
-请求地址：http://120.77.212.41/MYHTML/shundai/register.php
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/register.php
 ==========================================================
 
 请求格式：
@@ -31,7 +33,7 @@
 ```
 
 
-请求地址：http://120.77.212.41/MYHTML/shundai/getInformation.php
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/getInformation.php
 ==========================================================
 
 
@@ -60,7 +62,7 @@
             "username": "张中豪",
 			"nickname": "夜曲",
             "password": "123456",
-            "avatar": "http://120.77.212.41/MYHTML/shundai/picture/avatar/1.png",
+            "avatar": "http://120.77.212.41/MYHTML/shundaiLevelUP/picture/avatar/1.png",
             "phonenumber": "56481651",
             "sex": "1",
             "birthday": "1997-11-2",
@@ -145,7 +147,7 @@
                 "expressid": 2,
                 "username": "张中豪",
                 "nickname": "夜曲",
-                "avatar": "http://127.0.0.1/shundai/picture/avatar/1.png",
+                "avatar": "http://127.0.0.1/shundaiLevelUP/picture/avatar/1.png",
                 "deliverstatus": 0,
                 "delivertype": "顺丰快递",
                 "receivetime": "8:00-9:00",
@@ -155,7 +157,7 @@
                 "expressid": 4,
                 "username": "张中豪",
                 "nickname": "夜曲",
-                "avatar": "http://127.0.0.1/shundai/picture/avatar/1.png",
+                "avatar": "http://127.0.0.1/shundaiLevelUP/picture/avatar/1.png",
                 "deliverstatus": 0,
                 "delivertype": "圆通快递",
                 "receivetime": "9:00-12:00",
@@ -232,10 +234,10 @@
             {
                 "goodsid": 1,
                 "title": "我是一本书",
-                "avatar": "http://127.0.0.1/shundai/picture/avatar/1.png",
+                "avatar": "http://127.0.0.1/shundaiLevelUP/picture/avatar/1.png",
                 "username": "张中豪",
                 "nickname": "夜曲",
-                "image": "http://127.0.0.1/shundai/picture/image/1.png",
+                "image": "http://127.0.0.1/shundaiLevelUP/picture/image/1.png",
                 "printtime": "2018年5月1日",
                 "phonenumber": "17784451850",
                 "price": "88元",
@@ -244,10 +246,10 @@
             {
                 "goodsid": 6,
                 "title": "震惊",
-                "avatar": "http://127.0.0.1/shundai/picture/avatar/1.png",
+                "avatar": "http://127.0.0.1/shundaiLevelUP/picture/avatar/1.png",
                 "username": "张中豪",
                 "nickname": "夜曲",
-                "image": "http://127.0.0.1/shundai/picture/image/default.png",
+                "image": "http://127.0.0.1/shundaiLevelUP/picture/image/default.png",
                 "printtime": "2018年5月1日",
                 "phonenumber": "5468452",
                 "price": "86元",
@@ -363,7 +365,7 @@
 }
 ```
 
-请求地址：http://120.77.212.41/MYHTML/shundai/modifyAvatar.php
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/modify/modifyAvatar.php
 ============================================================
 
 ### 8、修改用户头像
@@ -384,14 +386,14 @@
         "status": 200,
         "info": "success",
         "data": {
-            "avatarUrl": "http://120.77.212.41/MYHTML/shundai/picture/avatar/2.png"
+            "avatarUrl": "http://120.77.212.41/MYHTML/shundaiLevelUP/picture/avatar/2.png"
         }
     }
 }
 ```
 
 
-请求地址：http://120.77.212.41/MYHTML/shundai/addExpress.php
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/add/addExpress.php
 ==========================================================
 
 ### 9、增加快递信息
@@ -426,7 +428,7 @@
 }
 ```
 
-请求地址：http://120.77.212.41/MYHTML/shundai/addSecondHand.php
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/add/addSecondHand.php
 ==========================================================
 
 ### 10、添加二手商品
@@ -469,7 +471,7 @@
 }
 ```
 
-请求地址：http://120.77.212.41/MYHTML/shundai/modifyImage.php
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/modify/modifyImage.php
 ============================================================
 
 ### 11、修改二手商品的图片
@@ -490,13 +492,13 @@
         "status": 200,
         "info": "success",
         "data": {
-            "imageUrl": "http://120.77.212.41/MYHTML/shundai/picture/image/1.png"
+            "imageUrl": "http://120.77.212.41/MYHTML/shundaiLevelUP/picture/image/1.png"
         }
     }
 }
 ```
 
-请求地址：http://120.77.212.41/MYHTML/shundai/deleteExpress.php
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/delete/deleteExpress.php
 ============================================================
 
 ### 12、删除快递
@@ -526,7 +528,7 @@
 
 
 
-请求地址：http://120.77.212.41/MYHTML/shundai/deleteSecondHand.php
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/delete/deleteSecondHand.php
 ============================================================
 
 ### 13、删除商品
@@ -554,7 +556,7 @@
 }
 ```
 
-请求地址：http://120.77.212.41/MYHTML/shundai/modifyUserInformation.php
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/modify/modifyUserInformation.php
 =======================================================================
 
 ### 14、修改个人信息
@@ -590,7 +592,7 @@
 ```
 
 
-请求地址：http://120.77.212.41/MYHTML/shundai/modifyExpressStatus.php
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/modify/modifyExpressStatus.php
 =================================================================
 
 ### 15、修改快递状态
@@ -615,6 +617,145 @@
         "status": 200,
         "info": "success",
         "data": "修改快递状态成功"
+    }
+}
+```
+
+#                       表白墙
+
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/SayYourLove/addLoveRequest.php
+
+1、	添加告白
+
+请求格式：
+```json
+{
+	"Type":0,
+	"Content":{
+		"uid":1,
+		"title":"我喜欢你",
+		"content":"when ever shall we meet again"
+	}
+}
+```
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": "添加成功"
+    }
+}
+```
+
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/SayYourLove/addComment.php
+
+2、	添加评论
+
+请求格式：
+```json
+{
+	"Type":0,
+	"Content":{
+		"uid":2,
+		"qid":3,
+		"content":"祝你成功"
+	}
+}
+```
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": "添加成功"
+    }
+}
+```
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/SayYourLove/getLoveWallList.php
+
+3、	请求告白列表
+
+请求格式：
+```json
+{
+	"Type":0,
+    "Content": {
+    	"page":1,  
+    	"count":2
+    }
+}
+```
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": [
+            {
+                "loveid": 1,
+                "title": "爱你一万年",
+                "content": "以后你是我老大"
+            },
+            {
+                "loveid": 3,
+                "title": "好了好了",
+                "content": "I want you"
+            }
+        ]
+    }
+}
+```
+请求地址：http://120.77.212.41/MYHTML/shundaiLevelUP/SayYourLove/getComments.php
+
+4、	请求评论列表
+
+请求格式：
+```json
+{
+	"Type":0,
+    "Content": {
+    	"qid":4
+    }
+}
+```
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": [
+            {
+                "username": "张中豪",
+                "nickname": "夜$曲",
+                "content": "I wangted you to be there when I fall",
+                "time": "2018-06-01 19:49:05"
+            },
+            {
+                "username": "老大",
+                "nickname": null,
+                "content": "祝你成功",
+                "time": "2018-06-01 21:02:06"
+            },
+            {
+                "username": "张中豪",
+                "nickname": "夜$曲",
+                "content": "I really love you",
+                "time": "2018-06-01 21:15:13"
+            }
+        ]
     }
 }
 ```

@@ -1,7 +1,7 @@
 <?php
 
-include("mysqlConnect.php");
-include("jsonWrapper.php");
+include(dirname(__FILE__)."/../mysqlConnect.php");
+include(dirname(__FILE__)."/../jsonWrapper.php");
 //解析android传来的数据
 $postData = file_get_contents('php://input');
 

@@ -1,11 +1,11 @@
 <?php
-include("mysqlConnect.php");
-include("jsonWrapper.php");
+include(dirname(__FILE__)."/../mysqlConnect.php");
+include(dirname(__FILE__)."/../jsonWrapper.php");
 //echo exec('whoami');
 if($_FILES['file']['error'] > 0){
 	other_encode(400,"文件错误！！！");
 }else{
-	$filepath = "picture/image/";//接收文件的目录
+	$filepath = "../picture/image/";//接收文件的目录
 
 	//将文件存到目录下
 	if(move_uploaded_file($_FILES['file']['tmp_name'],$filepath.$_FILES['file']['name'])){
@@ -13,7 +13,7 @@ if($_FILES['file']['error'] > 0){
 		//分割文件名，取出要用的id
         $tempArray = explode('.',$_FILES['file']['name']);
 		$id = $tempArray[0];
-		$url = "http://127.0.0.1/shundai/picture/image/".$_FILES['file']['name'];
+		$url = "http://127.0.0.1/shundaiLevelUP/picture/image/".$_FILES['file']['name'];
 		$sql = $pdo->prepare("UPDATE secondhand SET image=? WHERE id=?");
 	    if($sql->execute(array($url,$id))){ 
            $imageUrl["imageUrl"] = $url;		
