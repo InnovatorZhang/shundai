@@ -2,6 +2,8 @@
 
 ## demo 待完成
 
+#              基本功能
+
 ### 0、注册
 
 请求地址：http://120.77.212.41/MYHTML/shundai/register.php
@@ -618,3 +620,141 @@
     }
 }
 ```
+
+#               表白墙
+
+请求地址：http://120.77.212.41/MYHTML/shundai/addLoveRequest.php
+
+1、	添加告白
+
+请求格式：
+```json
+{
+	"Type":0,
+	"Content":{
+		"uid":1,
+		"title":"我喜欢你",
+		"content":"when ever shall we meet again"
+	}
+}
+```
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": "添加成功"
+    }
+}
+```
+请求地址：http://120.77.212.41/MYHTML/shundai/addComment.php
+
+2、	添加评论
+
+请求格式：
+```json
+{
+	"Type":0,
+	"Content":{
+		"uid":2,
+		"qid":3,
+		"content":"祝你成功"
+	}
+}
+```
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": "添加成功"
+    }
+}
+```
+请求地址：http://120.77.212.41/MYHTML/shundai/getLoveWallList.php
+
+3、	请求告白列表
+请求格式：
+```json
+{
+	"Type":0,
+    "Content": {
+    	"page":1,  
+    	"count":2
+    }
+}
+```
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": [
+            {
+                "loveid": 1,
+                "title": "爱你一万年",
+                "content": "以后你是我老大"
+            },
+            {
+                "loveid": 3,
+                "title": "好了好了",
+                "content": "I want you"
+            }
+        ]
+    }
+}
+```
+请求地址：http://120.77.212.41/MYHTML/shundai/getComments.php
+
+4、	请求评论列表
+
+请求格式：
+```json
+{
+	"Type":0,
+    "Content": {
+    	"qid":4
+    }
+}
+```
+返回格式：
+```json
+{
+    "ErrorCode": 0,
+    "ErrorMessage": "NONE",
+    "content": {
+        "status": 200,
+        "info": "success",
+        "data": [
+            {
+                "username": "张中豪",
+                "nickname": "夜$曲",
+                "content": "I wangted you to be there when I fall",
+                "time": "2018-06-01 19:49:05"
+            },
+            {
+                "username": "老大",
+                "nickname": null,
+                "content": "祝你成功",
+                "time": "2018-06-01 21:02:06"
+            },
+            {
+                "username": "张中豪",
+                "nickname": "夜$曲",
+                "content": "I really love you",
+                "time": "2018-06-01 21:15:13"
+            }
+        ]
+    }
+}
+```
+
