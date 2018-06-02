@@ -23,13 +23,34 @@ $data = $arrayData["Content"];
 	$begin = $page*$count;
 	
 	//数据库中查询
-	$sql = $pdo->prepare("SELECT id AS loveid,
-	title,content FROM lovewall
+	$sql = $pdo->prepare("SELECT lovewall.id AS loveid,
+	person.avatar,
+	person.username,
+	person.nickname,
+	lovewall.title,
+	lovewall.content,
+    lovewall.time	
+	FROM person RIGHT JOIN lovewall ON person.id=lovewall.uid
 	LIMIT ?,?");
 	
 	$sql->execute(array($begin,$count));
 	
 	if($data = $sql->fetchAll(PDO::FETCH_NAMED)){
+		//通过id添加评论条数
+		foreach($data as &$e){
+			$sql = $pdo->prepare("select count(*) AS count FROM comments WHERE qid=?");
+			$sql->execute(array($e["loveid"]));
+			
+			if($temp = $sql->fetchAll(PDO::FETCH_NAMED)){
+				 
+				foreach($temp as $c){
+					$e["count"] = $c["count"];
+				}
+			}else{
+				other_encode(400, "奇怪的错误");
+			}
+		}
+		
 		success_encode($data);
 	}else{
 		other_encode(400, "没有数据哦!");
