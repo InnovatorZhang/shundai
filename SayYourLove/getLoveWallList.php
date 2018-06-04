@@ -31,7 +31,7 @@ $data = $arrayData["Content"];
 	lovewall.content,
     lovewall.time	
 	FROM person RIGHT JOIN lovewall ON person.id=lovewall.uid
-	LIMIT ?,?");
+	ORDER BY lovewall.id DESC LIMIT ?,?");
 	
 	$sql->execute(array($begin,$count));
 	
